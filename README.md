@@ -1,11 +1,21 @@
 # Crypto Price
 
-## Dependency
-- requests
-- json
+## Dependencies
+- curl
+- python3
+- jq
 
-## Installation
-- `git clone https://github.com/AgungMoekti/crypto-price.git`
+## Installation 
+### Linux Ubuntu/Debian
+```
+git clone https://github.com/AgungMoekti/crypto-price.git
+sudo cp price /usr/local/bin/price
+sudo chmod +x /usr/local/bin/price
+```
+### Windows
+- idk bruh
 
 ## Usage
-- `./harga`
+```
+price btc
+```

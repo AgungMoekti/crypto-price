@@ -9,6 +9,7 @@
 ### Linux Ubuntu/Debian
 ```
 git clone https://github.com/AgungMoekti/crypto-price.git
+cd crypto-price
 sudo cp price /usr/local/bin/price
 sudo chmod +x /usr/local/bin/price
 ```
@@ -30,7 +31,8 @@ chmod +x $PREFIX/usr/bin/price
 ```
 
 ### Windows
-- idk lol
+- Just run the main.py
+- but i not sure lol 
 
 ## Usage
 ```

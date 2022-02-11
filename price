@@ -1,17 +1,3 @@
 #!/bin/sh
-url="https://indodax.com/api/tickers"
 
-red="\033[1;31m"
-green="\033[1;32m"
-yellow="\033[1;33m"
-
-price=$(curl -s $url | jq -r .tickers.$1_idr.buy | python3 -c 'import sys;import re; print(re.sub(r"(?<=.)(?=(?:...)+$)", ",",  sys.stdin.read()));') 
-vol=$(curl -s $url | jq -r .tickers.$1_idr.vol_idr | python3 -c 'import sys;import re; print(re.sub(r"(?<=.)(?=(?:...)+$)", ",",  sys.stdin.read()));' )
-
-echo "${yellow}Curent price $1 : ${green}Rp.$price"
-echo "${yellow}Curent volume $1 : ${green}Rp.$vol"
-echo "${red}Warning. This price based on indodax.com"
-
-
-# curl -s 'https://api.github.com/users/lambda' | \
-#    python3 -c "import sys, json; print(json.load(sys.stdin)['name'])"
+python3 /usr/local/bin/main.py $1 $2
